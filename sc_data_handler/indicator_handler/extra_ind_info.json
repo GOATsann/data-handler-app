@@ -1,0 +1,496 @@
+{
+    "Cycle Indicators": {
+        "HT_DCPERIOD": {
+            "plot_type": "sub_plot"
+        },
+        "HT_DCPHASE": {
+            "plot_type": "sub_plot"
+        },
+        "HT_PHASOR": {
+            "plot_type": "sub_plot"
+        },
+        "HT_SINE": {
+            "plot_type": "sub_plot"
+        },
+        "HT_TRENDMODE": {
+            "plot_type": "sub_plot"
+        }
+    },
+    "Math Operators": {
+        "ADD": {
+            "plot_type": "sub_plot"
+        },
+        "DIV": {
+            "plot_type": "sub_plot"
+        },
+        "MAX": {
+            "plot_type": "sub_plot"
+        },
+        "MAXINDEX": {
+            "plot_type": "sub_plot"
+        },
+        "MIN": {
+            "plot_type": "sub_plot"
+        },
+        "MININDEX": {
+            "plot_type": "sub_plot"
+        },
+        "MINMAX": {
+            "plot_type": "sub_plot"
+        },
+        "MINMAXINDEX": {
+            "plot_type": "sub_plot"
+        },
+        "MULT": {
+            "plot_type": "sub_plot"
+        },
+        "SUB": {
+            "plot_type": "sub_plot"
+        },
+        "SUM": {
+            "plot_type": "sub_plot"
+        }
+    },
+    "Math Transform": {
+        "ACOS": {
+            "plot_type": "sub_plot"
+        },
+        "ASIN": {
+            "plot_type": "sub_plot"
+        },
+        "ATAN": {
+            "plot_type": "sub_plot"
+        },
+        "CEIL": {
+            "plot_type": "sub_plot"
+        },
+        "COS": {
+            "plot_type": "sub_plot"
+        },
+        "COSH": {
+            "plot_type": "sub_plot"
+        },
+        "EXP": {
+            "plot_type": "sub_plot"
+        },
+        "FLOOR": {
+            "plot_type": "sub_plot"
+        },
+        "LN": {
+            "plot_type": "sub_plot"
+        },
+        "LOG10": {
+            "plot_type": "sub_plot"
+        },
+        "SIN": {
+            "plot_type": "sub_plot"
+        },
+        "SINH": {
+            "plot_type": "sub_plot"
+        },
+        "SQRT": {
+            "plot_type": "sub_plot"
+        },
+        "TAN": {
+            "plot_type": "sub_plot"
+        },
+        "TANH": {
+            "plot_type": "sub_plot"
+        }
+    },
+    "Momentum Indicators": {
+        "ADX": {
+            "plot_type": "sub_plot"
+        },
+        "ADXR": {
+            "plot_type": "sub_plot"
+        },
+        "APO": {
+            "plot_type": "sub_plot"
+        },
+        "AROON": {
+            "plot_type": "sub_plot"
+        },
+        "AROONOSC": {
+            "plot_type": "sub_plot"
+        },
+        "BOP": {
+            "plot_type": "sub_plot"
+        },
+        "CCI": {
+            "plot_type": "sub_plot"
+        },
+        "CMO": {
+            "plot_type": "sub_plot"
+        },
+        "DX": {
+            "plot_type": "sub_plot"
+        },
+        "MACD": {
+            "plot_type": "sub_plot"
+        },
+        "MACDEXT": {
+            "plot_type": "sub_plot"
+        },
+        "MACDFIX": {
+            "plot_type": "sub_plot"
+        },
+        "MFI": {
+            "plot_type": "sub_plot"
+        },
+        "MINUS_DI": {
+            "plot_type": "sub_plot"
+        },
+        "MINUS_DM": {
+            "plot_type": "sub_plot"
+        },
+        "MOM": {
+            "plot_type": "sub_plot"
+        },
+        "PLUS_DI": {
+            "plot_type": "sub_plot"
+        },
+        "PLUS_DM": {
+            "plot_type": "sub_plot"
+        },
+        "PPO": {
+            "plot_type": "sub_plot"
+        },
+        "ROC": {
+            "plot_type": "sub_plot"
+        },
+        "ROCP": {
+            "plot_type": "sub_plot"
+        },
+        "ROCR": {
+            "plot_type": "sub_plot"
+        },
+        "ROCR100": {
+            "plot_type": "sub_plot"
+        },
+        "RSI": {
+            "plot_type": "sub_plot"
+        },
+        "STOCH": {
+            "plot_type": "sub_plot"
+        },
+        "STOCHF": {
+            "plot_type": "sub_plot"
+        },
+        "STOCHRSI": {
+            "plot_type": "sub_plot"
+        },
+        "TRIX": {
+            "plot_type": "sub_plot"
+        },
+        "ULTOSC": {
+            "plot_type": "sub_plot"
+        },
+        "WILLR": {
+            "plot_type": "sub_plot"
+        }
+    },
+    "Overlap Studies": {
+        "BBANDS": {
+            "plot_type": "same_plot"
+        },
+        "DEMA": {
+            "plot_type": "same_plot"
+        },
+        "EMA": {
+            "plot_type": "same_plot"
+        },
+        "HT_TRENDLINE": {
+            "plot_type": "same_plot"
+        },
+        "KAMA": {
+            "plot_type": "same_plot"
+        },
+        "MA": {
+            "plot_type": "same_plot"
+        },
+        "MAMA": {
+            "plot_type": "same_plot"
+        },
+        "MAVP": {
+            "plot_type": "same_plot"
+        },
+        "MIDPOINT": {
+            "plot_type": "same_plot"
+        },
+        "MIDPRICE": {
+            "plot_type": "same_plot"
+        },
+        "SAR": {
+            "plot_type": "same_plot"
+        },
+        "SAREXT": {
+            "plot_type": "same_plot"
+        },
+        "SMA": {
+            "plot_type": "same_plot"
+        },
+        "T3": {
+            "plot_type": "same_plot"
+        },
+        "TEMA": {
+            "plot_type": "same_plot"
+        },
+        "TRIMA": {
+            "plot_type": "same_plot"
+        },
+        "WMA": {
+            "plot_type": "same_plot"
+        }
+    },
+    "Pattern Recognition": {
+        "CDL2CROWS": {
+            "plot_type": "same_plot"
+        },
+        "CDL3BLACKCROWS": {
+            "plot_type": "same_plot"
+        },
+        "CDL3INSIDE": {
+            "plot_type": "same_plot"
+        },
+        "CDL3LINESTRIKE": {
+            "plot_type": "same_plot"
+        },
+        "CDL3OUTSIDE": {
+            "plot_type": "same_plot"
+        },
+        "CDL3STARSINSOUTH": {
+            "plot_type": "same_plot"
+        },
+        "CDL3WHITESOLDIERS": {
+            "plot_type": "same_plot"
+        },
+        "CDLABANDONEDBABY": {
+            "plot_type": "same_plot"
+        },
+        "CDLADVANCEBLOCK": {
+            "plot_type": "same_plot"
+        },
+        "CDLBELTHOLD": {
+            "plot_type": "same_plot"
+        },
+        "CDLBREAKAWAY": {
+            "plot_type": "same_plot"
+        },
+        "CDLCLOSINGMARUBOZU": {
+            "plot_type": "same_plot"
+        },
+        "CDLCONCEALBABYSWALL": {
+            "plot_type": "same_plot"
+        },
+        "CDLCOUNTERATTACK": {
+            "plot_type": "same_plot"
+        },
+        "CDLDARKCLOUDCOVER": {
+            "plot_type": "same_plot"
+        },
+        "CDLDOJI": {
+            "plot_type": "same_plot"
+        },
+        "CDLDOJISTAR": {
+            "plot_type": "same_plot"
+        },
+        "CDLDRAGONFLYDOJI": {
+            "plot_type": "same_plot"
+        },
+        "CDLENGULFING": {
+            "plot_type": "same_plot"
+        },
+        "CDLEVENINGDOJISTAR": {
+            "plot_type": "same_plot"
+        },
+        "CDLEVENINGSTAR": {
+            "plot_type": "same_plot"
+        },
+        "CDLGAPSIDESIDEWHITE": {
+            "plot_type": "same_plot"
+        },
+        "CDLGRAVESTONEDOJI": {
+            "plot_type": "same_plot"
+        },
+        "CDLHAMMER": {
+            "plot_type": "same_plot"
+        },
+        "CDLHANGINGMAN": {
+            "plot_type": "same_plot"
+        },
+        "CDLHARAMI": {
+            "plot_type": "same_plot"
+        },
+        "CDLHARAMICROSS": {
+            "plot_type": "same_plot"
+        },
+        "CDLHIGHWAVE": {
+            "plot_type": "same_plot"
+        },
+        "CDLHIKKAKE": {
+            "plot_type": "same_plot"
+        },
+        "CDLHIKKAKEMOD": {
+            "plot_type": "same_plot"
+        },
+        "CDLHOMINGPIGEON": {
+            "plot_type": "same_plot"
+        },
+        "CDLIDENTICAL3CROWS": {
+            "plot_type": "same_plot"
+        },
+        "CDLINNECK": {
+            "plot_type": "same_plot"
+        },
+        "CDLINVERTEDHAMMER": {
+            "plot_type": "same_plot"
+        },
+        "CDLKICKING": {
+            "plot_type": "same_plot"
+        },
+        "CDLKICKINGBYLENGTH": {
+            "plot_type": "same_plot"
+        },
+        "CDLLADDERBOTTOM": {
+            "plot_type": "same_plot"
+        },
+        "CDLLONGLEGGEDDOJI": {
+            "plot_type": "same_plot"
+        },
+        "CDLLONGLINE": {
+            "plot_type": "same_plot"
+        },
+        "CDLMARUBOZU": {
+            "plot_type": "same_plot"
+        },
+        "CDLMATCHINGLOW": {
+            "plot_type": "same_plot"
+        },
+        "CDLMATHOLD": {
+            "plot_type": "same_plot"
+        },
+        "CDLMORNINGDOJISTAR": {
+            "plot_type": "same_plot"
+        },
+        "CDLMORNINGSTAR": {
+            "plot_type": "same_plot"
+        },
+        "CDLONNECK": {
+            "plot_type": "same_plot"
+        },
+        "CDLPIERCING": {
+            "plot_type": "same_plot"
+        },
+        "CDLRICKSHAWMAN": {
+            "plot_type": "same_plot"
+        },
+        "CDLRISEFALL3METHODS": {
+            "plot_type": "same_plot"
+        },
+        "CDLSEPARATINGLINES": {
+            "plot_type": "same_plot"
+        },
+        "CDLSHOOTINGSTAR": {
+            "plot_type": "same_plot"
+        },
+        "CDLSHORTLINE": {
+            "plot_type": "same_plot"
+        },
+        "CDLSPINNINGTOP": {
+            "plot_type": "same_plot"
+        },
+        "CDLSTALLEDPATTERN": {
+            "plot_type": "same_plot"
+        },
+        "CDLSTICKSANDWICH": {
+            "plot_type": "same_plot"
+        },
+        "CDLTAKURI": {
+            "plot_type": "same_plot"
+        },
+        "CDLTASUKIGAP": {
+            "plot_type": "same_plot"
+        },
+        "CDLTHRUSTING": {
+            "plot_type": "same_plot"
+        },
+        "CDLTRISTAR": {
+            "plot_type": "same_plot"
+        },
+        "CDLUNIQUE3RIVER": {
+            "plot_type": "same_plot"
+        },
+        "CDLUPSIDEGAP2CROWS": {
+            "plot_type": "same_plot"
+        },
+        "CDLXSIDEGAP3METHODS": {
+            "plot_type": "same_plot"
+        }
+    },
+    "Price Transform": {
+        "AVGPRICE": {
+            "plot_type": "same_plot"
+        },
+        "MEDPRICE": {
+            "plot_type": "same_plot"
+        },
+        "TYPPRICE": {
+            "plot_type": "same_plot"
+        },
+        "WCLPRICE": {
+            "plot_type": "same_plot"
+        }
+    },
+    "Statistic Functions": {
+        "BETA": {
+            "plot_type": "same_plot"
+        },
+        "CORREL": {
+            "plot_type": "sub_plot"
+        },
+        "LINEARREG": {
+            "plot_type": "same_plot"
+        },
+        "LINEARREG_ANGLE": {
+            "plot_type": "sub_plot"
+        },
+        "LINEARREG_INTERCEPT": {
+            "plot_type": "same_plot"
+        },
+        "LINEARREG_SLOPE": {
+            "plot_type": "same_plot"
+        },
+        "STDDEV": {
+            "plot_type": "sub_plot"
+        },
+        "TSF": {
+            "plot_type": "same_plot"
+        },
+        "VAR": {
+            "plot_type": "sub_plot"
+        }  
+    },
+    "Volatility Indicators": {
+        "ATR": {
+            "plot_type": "sub_plot"
+        },
+        "NATR": {
+            "plot_type": "sub_plot"
+        },
+        "TRANGE": {
+            "plot_type": "sub_plot"
+        }
+    },
+    "Volume Indicators": {
+        "AD": {
+            "plot_type": "sub_plot"
+        },
+        "ADOSC": {
+            "plot_type": "sub_plot"
+        },
+        "OBV": {
+            "plot_type": "sub_plot"
+        }
+    }
+}

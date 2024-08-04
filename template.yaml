@@ -1,0 +1,86 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+    data-handler-app
+
+    Powertools for AWS Lambda (Python) example
+
+Globals:
+  Function:
+    Timeout: 900
+    MemorySize: 1024 #need low cold start times
+    Environment:
+      Variables:
+        FMP_API_KEY: xJNks2ZWMQAos8g6TlwXBQBJj73WuCkX
+  Api:
+    TracingEnabled: true
+    Cors:
+      AllowMethods: "'POST,OPTIONS,GET'"
+      AllowHeaders: "'*'"
+      AllowOrigin: "'*'"
+      MaxAge: "'6000'"
+    Auth:
+      DefaultAuthorizer: MyCognitoAuth
+      Authorizers:
+        MyCognitoAuth:
+          UserPoolArn: arn:aws:cognito-idp:us-east-1:188576361027:userpool/us-east-1_q5Hsfb829 #panda dev
+      AddDefaultAuthorizerToCorsPreflight: False
+
+Resources:
+  MyApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: Prod
+      Auth:
+        DefaultAuthorizer: MyCognitoAuth
+      MethodSettings:
+        - ResourcePath: /*
+          HttpMethod: '*'
+          LoggingLevel: INFO
+          MetricsEnabled: true
+
+  GetStockCryptoDataFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-function.html
+    Properties:
+        MemorySize: 5000
+        PackageType: Image
+        Architectures:
+          - x86_64
+        Description: Get Stock and Crypto Data
+        Tracing: Active
+        Events:
+          GetStockCryptoDataApi:
+            Type: Api
+            Properties:
+                Path: /get_data/
+                Method: POST
+                RestApiId:
+                    Ref: MyApi
+          GetAvaibaleIndicatorsApi:
+            Type: Api
+            Properties:
+              Path: /get_available_indicators/
+              Method: GET
+              RestApiId:
+                Ref: MyApi
+          GetIndicatorDataApi:
+            Type: Api
+            Properties:
+              Path: /get_indicator_data/
+              Method: POST
+              RestApiId:
+                Ref: MyApi
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./sc_data_handler
+      DockerTag: python3.10-v1
+
+Outputs:
+    GetStockCryptoDataApi:
+        Description: "API Gateway endpoint URL for Prod environment for Get Stock and Crypto Data Function"
+        Value: !Sub "https://${MyApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/get_data/"
+    
+    GetStockCryptoDataFunctionArn:
+        Description: "Get Stock and Crypto Data Lambda Function ARN"
+        Value: !GetAtt GetStockCryptoDataFunction.Arn
+

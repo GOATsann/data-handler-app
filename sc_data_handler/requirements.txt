@@ -1,0 +1,4 @@
+aws-lambda-powertools[tracer]
+pandas==1.5.3
+numpy==1.24.2
+certifi==2024.6.2
