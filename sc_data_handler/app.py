@@ -1,7 +1,7 @@
 import datetime
 import json
 import pytz
-from aws_lambda_powertools.event_handler import APIGatewayRestResolver
+from aws_lambda_powertools.event_handler import APIGatewayRestResolver, CORSConfig
 from aws_lambda_powertools.utilities.typing import LambdaContext
 from aws_lambda_powertools.logging import correlation_paths
 from aws_lambda_powertools import Logger
@@ -15,7 +15,15 @@ from stock_crypto_data.fmp_data_handler import (
 from indicator_handler.talib_handler import TaLibIndicatorHandler
 from utils import GeneralEncoder, get_last_n_points
 
-app = APIGatewayRestResolver()
+cors_config = CORSConfig(
+    allow_origin="*",
+    extra_origins=[],
+    allow_headers=["*"],
+    expose_headers=[],
+    max_age=6000,
+)
+
+app = APIGatewayRestResolver(cors=cors_config)
 tracer = Tracer()
 logger = Logger()
 metrics = Metrics(namespace="Powertools")
