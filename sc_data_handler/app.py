@@ -105,7 +105,7 @@ def get_available_indicators():
 @logger.inject_lambda_context(correlation_id_path=correlation_paths.API_GATEWAY_REST)
 # Adding tracer
 # See: https://awslabs.github.io/aws-lambda-powertools-python/latest/core/tracer/
-@tracer.capture_lambda_handler
+@tracer.capture_lambda_handler(capture_response=False)
 # ensures metrics are flushed upon request completion/failure and capturing ColdStart metric
 @metrics.log_metrics(capture_cold_start_metric=True)
 def lambda_handler(event: dict, context: LambdaContext) -> dict:
