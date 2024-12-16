@@ -35,19 +35,20 @@ talib_handler = TaLibIndicatorHandler()
 @app.post("/get_data/")
 @tracer.capture_method
 def get_data():
-    timezone = pytz.timezone("America/New_York")
-    current_time = datetime.datetime.now(timezone)
     current_json = app.current_event.json_body
 
     type_ = current_json.get("data_type")  # stock, or crypto
     asset_symbol = current_json.get("data_name")  # stock name, or crypto name
     from_date = current_json.get("from_date")
-    to_date = current_json.get("to_date", current_time.strftime("%Y-%m-%d %H:%M:%S%z"))
+    to_date = current_json.get("to_date", None)
     tframe = current_json.get("time_frame", "1day")
 
-    start_date = parse_date_string(from_date)
-    end_date = parse_date_string(to_date)
-    retrieved_data = fmp_handler.retrieve_historical_bars(
+    start_date, end_date = parse_date_string(from_date, True)
+
+    if to_date is not None:
+        end_date, _ = parse_date_string(to_date)
+
+    retrieved_data = fmp_handler.recurssive_call_retrieve_historical_bars(
         asset_symbol, start_date, end_date, tframe, type_
     )
     return json.dumps({"data": retrieved_data})
