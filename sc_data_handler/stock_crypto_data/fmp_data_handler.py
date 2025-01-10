@@ -147,12 +147,6 @@ class FMPStockCryptoDataRetriever:
         self.intraday_url = f"{self.base_api_url}/historical-chart"
         self.daily_url = f"{self.base_api_url}/historical-price-full"
 
-        self.active_symbols = (
-            self.get_data_list_short("stock")
-            + self.get_data_list_short("crypto")
-            + self.get_data_list_short("etf")
-        )
-
     def get_data_list_full(self, data_type: str = "stock") -> List[Dict]:
         """Retrieve a list of all the stocks, eft, or crypto available on Financial Modeling Prep
 
