@@ -140,66 +140,9 @@ class FMPStockCryptoDataRetriever:
     def __init__(self, api_key: str = FMP_API_KEY):
         self.api_key = api_key
         self.base_api_url = "https://financialmodelingprep.com/api/v3"
-        self.stock_list_url = f"{self.base_api_url}/stock/list"
-        self.etf_list_url = f"{self.base_api_url}/etf/list"
-        self.crypto_list_url = f"{self.base_api_url}/symbol/available-cryptocurrencies"
 
         self.intraday_url = f"{self.base_api_url}/historical-chart"
         self.daily_url = f"{self.base_api_url}/historical-price-full"
-
-    def get_data_list_full(self, data_type: str = "stock") -> List[Dict]:
-        """Retrieve a list of all the stocks, eft, or crypto available on Financial Modeling Prep
-
-        Args:
-            data_type (str, optional): The type of data to retrieve. Options are 'stock', 'etf', 'crypto'. Defaults to 'stock'.
-
-        Returns:
-            List[Dict]: A list of dictionaries containing the stock data,
-            including the symbol, name, price, and exchange information
-        """
-        if data_type == "stock":
-            url = f"{self.stock_list_url}?apikey={self.api_key}"
-        elif data_type == "etf":
-            url = f"{self.etf_list_url}?apikey={self.api_key}"
-        elif data_type == "crypto":
-            url = f"{self.crypto_list_url}?apikey={self.api_key}"
-        else:
-            raise Exception(
-                "Invalid data_type value. Must be 'stock', 'etf', or 'crypto'"
-            )
-        return get_jsonparsed_data(url)
-
-    def get_data_list_short(self, data_type: str = "stock") -> List[str]:
-        """Retrieve a list of all the stocks, eft, or crypto available on Financial Modeling Prep
-
-        Args:
-            data_type (str, optional): The type of data to retrieve. Options are 'stock', 'etf', 'crypto'. Defaults to 'stock'.
-
-        Returns:
-            List[str]: A list of the symbols names
-        """
-        data_list = self.get_data_list_full(data_type=data_type)
-        return [data["symbol"].lower() for data in data_list]
-
-    def validate_asset_symbol(self, symbol: str) -> Tuple[bool, str]:
-        """verify that the symbol is an active/available symbol
-
-        Args:
-            symbol (str): the symbol to validate
-
-        Returns:
-            Tuple[bool, str]: A tuple containing a boolean value indicating if the symbol is valid and the type of the symbol
-        """
-        stock_list = self.get_data_list_short("stock")
-        if symbol.lower() in stock_list:
-            return True, "stock"
-        etf_list = self.get_data_list_short("etf")
-        if symbol.lower() in etf_list:
-            return True, "stock"
-        crypto_list = self.get_data_list_short("crypto")
-        if symbol.lower() in crypto_list:
-            return True, "crypto"
-        return False, None
 
     def retrieve_historical_bars(
         self,
